@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useData } from "../../hooks/useData";
 
 function ActivityFinder() { // Fetches a random activity
+
     const [participants, setParticipants] = useState(1);
-    const [activity, setActivity] = useState('');
-    useEffect(() => {
-        fetch('https://www.boredapi.com/api/activity?' + 'participants=' + participants)
-            .then(response => response.json())
-            .then(json => {
-                setActivity(json.activity);
-            });
-    }, [participants]);
+
+    // uses custom hook to handle the effect for loading external data
+    const data = useData('https://www.boredapi.com/api/activity?' +
+        'participants=' + participants);
+
+    // get the activity from the json or show error message if failed
+    const activity = data ? data.activity : 'not found';
+
     return (
         <div className="ActivityFinder componentBox">
             <h3>Activity Finder</h3>

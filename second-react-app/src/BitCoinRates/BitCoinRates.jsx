@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import './BitcoinRates.css'; 
 
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];

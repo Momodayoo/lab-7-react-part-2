@@ -6,6 +6,11 @@ import './App.css'
 import ClockDisplay from './Clock/Clock'
 import ActivityFinder from './ActivityFinder/ActivityFinder'
 import BitcoinRates from './BitCoinRates/BitCoinRates'
+import RefCounter from './RefCounter/RefCounter'
+import VideoPlayer from './VideoPlayer/VideoPlayer'
+import ReducerCounter from './ReducerCounter/ReducerCounter'
+import PostListReducer from './PostListReducer/PostListReducer'
+import SubscribeForm from './SubscribeForm/SubscribeForm'
 
 
 function App() {
@@ -34,11 +39,21 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
 
-          {/* <ClockDisplay/> 
+          {/* <ClockDisplay/>  */}
 
-          <ActivityFinder/>  */}
+          {/* <ActivityFinder/>  */}
 
-          <BitcoinRates/>
+          <BitcoinRates/> <br/>
+
+           {/* <RefCounter/> */}
+
+           {/* <VideoPlayer/> */}
+
+           {/* <ReducerCounter/> */}
+
+           {/* <PostListReducer/> */}
+
+           {/* <SubscribeForm/> */}
     </>
   )
 }
