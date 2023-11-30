@@ -11,6 +11,7 @@ import VideoPlayer from './VideoPlayer/VideoPlayer'
 import ReducerCounter from './ReducerCounter/ReducerCounter'
 import PostListReducer from './PostListReducer/PostListReducer'
 import SubscribeForm from './SubscribeForm/SubscribeForm'
+import BitcoinRatesExtender from './BitCoinRates/BitCoinRatesExtender'
 
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
            {/* <PostListReducer/> */}
 
            {/* <SubscribeForm/> */}
+
+           <br/> 
+           <BitcoinRatesExtender/>
     </>
   )
 }

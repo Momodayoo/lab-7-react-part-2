@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useDataReducer } from "../../hooks/useDataReducer"
 
+import './BitcoinRates.css'; 
+
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
 
-function BitcoinRates() {
+function BitcoinRatesExtender() {
 
     const [currency, setCurrency] = useState(currencies[0]);
     const btcResponse = useDataReducer(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=${currency}`);
@@ -13,14 +15,14 @@ function BitcoinRates() {
 
     return (
         <div className="BitcoinRates componentBox">
-            <h3>Bitcoin Exchange Rate</h3>
+            <h3>Bitcoin Exchange Rate Extender</h3>
             <label>Choose currency:
                 <select value={currency} onChange={e => setCurrency(e.target.value)}>
                     {options}
                 </select>
             </label>
             {btcResponse.loading ? <div>Please wait ...</div>
-                : <div>1 BTC is worth {btcPrice} {currency}</div>}
+                : <div>1 BTC = {btcPrice} {currency}</div>}
             <div>{btcResponse.error}</div>
             
         </div>
@@ -28,4 +30,4 @@ function BitcoinRates() {
 
 }
 
-export default BitcoinRates;
+export default BitcoinRatesExtender;

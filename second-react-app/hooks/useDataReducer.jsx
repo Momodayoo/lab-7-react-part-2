@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 
 // hooks are usually named exports rather than default
-export default function useDataReducer(url) {
+export function useDataReducer(url) {
     // reducer state variable for holding fetched json data
     const [data, dispatch] = useReducer(reducer, { loading: true, data: {}, error: ''});
 
