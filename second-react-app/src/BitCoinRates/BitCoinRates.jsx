@@ -33,7 +33,7 @@ function BitcoinRates() {
                     {options}
                 </select>
             </label>
-            <div className="exchange-rate-box"> 1 BTC is worth {btcPrice} {currency}</div>
+            <div className="exchange-rate-box"> 1 BTC = {btcPrice} {currency}</div>
         </div>
     )
 
