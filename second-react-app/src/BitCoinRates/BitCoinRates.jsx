@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useEmojiContext } from "../Context/EmojiContext"; 
 
 import './BitcoinRates.css'; 
 
@@ -8,6 +9,7 @@ function BitcoinRates() {
 
     const [currency, setCurrency] = useState(currencies[0]);
     const [btcPrice, setBtcPrice] = useState(0);
+    const {emoji} = useEmojiContext();
 
     useEffect(() => {
         let ignore = false;
@@ -34,7 +36,7 @@ function BitcoinRates() {
                     {options}
                 </select>
             </label>
-            <div className="exchange-rate-box"> 1 BTC = {btcPrice} {currency}</div>
+            <div className="exchange-rate-box"> 1 BTC = {btcPrice} {currency}{emoji}</div>
         </div>
     )
 

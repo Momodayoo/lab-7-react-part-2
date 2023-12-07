@@ -12,14 +12,31 @@ import ReducerCounter from './ReducerCounter/ReducerCounter'
 import PostListReducer from './PostListReducer/PostListReducer'
 import SubscribeForm from './SubscribeForm/SubscribeForm'
 import BitcoinRatesExtender from './BitCoinRates/BitCoinRatesExtender'
+import { UserProvider } from './Context/UserContext'
+import LoginForm from './LoginForm/LoginForm'
 
+import Emoji from './Emoji/Emoji'
+import { EmojiProvider } from './Context/EmojiContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
-    <>
-      {/* <div>
+    <EmojiProvider>
+      <div>
+        <BitcoinRates />
+        <br />
+        <BitcoinRatesExtender />
+        <br />
+        <Emoji />
+        <br />
+      </div>
+    </EmojiProvider>
+  );
+}
+
+    // <>
+      /* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -38,28 +55,30 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
+      </p> */
+      
+/* <UserProvider> */
+/* <MyThemeProvider>   */
+          /* <ClockDisplay/> */
 
-          {/* <ClockDisplay/>  */}
+          /* <ActivityFinder/> */
 
-          {/* <ActivityFinder/>  */}
+          /* <RefCounter/> */
 
-          <BitcoinRates/> <br/>
+           /* <VideoPlayer/> */
 
-           {/* <RefCounter/> */}
+           /* <ReducerCounter/> */
 
-           {/* <VideoPlayer/> */}
+           /* <PostListReducer/> */
 
-           {/* <ReducerCounter/> */}
+           /* <SubscribeForm/> */
 
-           {/* <PostListReducer/> */}
+           /* <LoginForm/> */
+/* </MyThemeProvider>            */
+/* </UserProvider> */
 
-           {/* <SubscribeForm/> */}
+    // </>
+//   );
+// }
 
-           <br/> 
-           <BitcoinRatesExtender/>
-    </>
-  )
-}
-
-export default App
+export default App;
