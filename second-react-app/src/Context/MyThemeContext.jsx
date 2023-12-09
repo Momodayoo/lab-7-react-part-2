@@ -27,5 +27,9 @@ export default function MyThemeProvider(props) {
         </MyThemeContext.Provider>
     );
 }
+
+export const useMyThemeContext = () => {
+    return useMyThemeContext(MyThemeContext);
+};
 // ++ Try to use this context to style some existing components
 // ++ Try to add a component with a button/checkbox to switch themes

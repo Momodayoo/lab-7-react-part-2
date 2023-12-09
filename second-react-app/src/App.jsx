@@ -1,37 +1,50 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 
-import ClockDisplay from './Clock/Clock'
-import ActivityFinder from './ActivityFinder/ActivityFinder'
+// import ClockDisplay from './Clock/Clock'
+// import ActivityFinder from './ActivityFinder/ActivityFinder'
 import BitcoinRates from './BitCoinRates/BitCoinRates'
-import RefCounter from './RefCounter/RefCounter'
-import VideoPlayer from './VideoPlayer/VideoPlayer'
-import ReducerCounter from './ReducerCounter/ReducerCounter'
-import PostListReducer from './PostListReducer/PostListReducer'
-import SubscribeForm from './SubscribeForm/SubscribeForm'
+// import RefCounter from './RefCounter/RefCounter'
+// import VideoPlayer from './VideoPlayer/VideoPlayer'
+// import ReducerCounter from './ReducerCounter/ReducerCounter'
+// import PostListReducer from './PostListReducer/PostListReducer'
+// import SubscribeForm from './SubscribeForm/SubscribeForm'
 import BitcoinRatesExtender from './BitCoinRates/BitCoinRatesExtender'
-import { UserProvider } from './Context/UserContext'
-import LoginForm from './LoginForm/LoginForm'
+// import { UserProvider } from './Context/UserContext'
+// import LoginForm from './LoginForm/LoginForm'
 
 import Emoji from './Emoji/Emoji'
 import { EmojiProvider } from './Context/EmojiContext'
+
+import AppRoutes from './Routes/AppRoutes'
+import { BrowserRouter } from 'react-router-dom'
+import NavBar from './components/NavBar'
+
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
+    
+   
     <EmojiProvider>
       <div>
+      <NavBar/>
         <BitcoinRates />
         <br />
         <BitcoinRatesExtender />
         <br />
         <Emoji />
         <br />
+        
+       
       </div>
     </EmojiProvider>
+    
+    
+    
   );
 }
 
