@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, { useContext} from "react";
 
 
 // theme options with specific colour values
@@ -29,7 +29,7 @@ export default function MyThemeProvider(props) {
 }
 
 export const useMyThemeContext = () => {
-    return useMyThemeContext(MyThemeContext);
+    return useContext(MyThemeContext);
 };
 // ++ Try to use this context to style some existing components
 // ++ Try to add a component with a button/checkbox to switch themes

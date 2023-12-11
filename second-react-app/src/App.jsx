@@ -28,9 +28,9 @@ function App() {
 
   return (
     
-   
+   <>
     <EmojiProvider>
-      <div>
+      
       <NavBar/>
         <BitcoinRates />
         <br />
@@ -38,13 +38,12 @@ function App() {
         <br />
         <Emoji />
         <br />
-        
-       
-      </div>
+            
+      
     </EmojiProvider>
     
     
-    
+    </>
   );
 }
 
