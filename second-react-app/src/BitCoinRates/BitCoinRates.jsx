@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+ 
 import { useEmojiContext } from "../Context/EmojiContext"; 
 
 import './BitcoinRates.css'; 
